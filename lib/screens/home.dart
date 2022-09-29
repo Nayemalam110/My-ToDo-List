@@ -5,15 +5,13 @@ import 'package:get/get.dart';
 import 'package:my_to_do_list/controllers/todo_controller.dart';
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
-
   @override
   State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
   final _formKey = GlobalKey<FormState>();
-  var _taskController = TextEditingController();
+  TextEditingController _taskController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final todoController = Get.find<TodoController>();
